@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --shadow-1 : 0 .125rem .25rem rgba(0,0,0,.075);
+    --shadow-2 : 0 .5rem  1rem rgba(0,0,0,.15);
+    --shadow-3 : 0 1rem 3rem rgba(0,0,0,.175);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+}
+html{
+    font-family: poppins;
+}
+body{   
+   background-image: url(./Img/pexels-photo-255464.jpeg);
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+a,
+a:hover{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+.huda-accordion{
+    width: 600px;
+    height: 200px auto 0;
+    margin-left: 350px;
+    background-color: tomato;
+    
+}
+.huda-accordion .accordion-item {
+    background-color: #fff;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: var(--shadow-1);
+    background-color: rgb(55, 0, 255);
+    color: white;
+}
+.huda-accordion .accordion-item .accordion-header {
+    padding: 15px 20px;
+    border-bottom: 1px solid #e9e9e9;
+    cursor: pointer;
+    position: relative;
+    background-color: rgb(130, 173, 238);
+}
+.huda-accordion .accordion-item .accordion-header::before {
+    content: '\f077';
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 25px;
+    transition: .3s;
+}
+.huda-accordion .accordion-item .accordion-header.active::before {
+    transform: rotate(180deg);
+}
+.huda-accordion .accordion-item .accordion-body {
+    transition: .3s;  
+    height: 0;
+    overflow: hidden;
+    
+}
+.huda-accordion .accordion-item .accordion-body .accordion-content{
+    padding: 15px 20px;
+}
