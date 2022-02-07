@@ -5,9 +5,12 @@ acc_header.forEach(item => {
 
         acc_header.forEach(item => {    
 
-            item.classList.remove('active')
-            item.nextElementSibling.style.height = '0px';   
-
+            if ( item != this) {
+                
+                item.classList.remove('active')
+                item.nextElementSibling.style.height = '0px';   
+                
+            }
         });
 
         item.classList.toggle('active');
